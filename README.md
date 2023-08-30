@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Set Up
+
+Prease install Node.js version 18.17.1
+- https://nodejs.org/ja
+
+Run the following command at the top level.
+```bash
+npm ci
+```
+
+Finally,by executing the following command,you can start the development environment.
+```bash
+npm run start
+```
