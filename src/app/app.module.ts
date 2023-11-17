@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeContainerComponent } from './home-container/home-container.component';
 import { AboutContainerComponent } from './about-container/about-container.component';
 import { ForIfComponent } from './for-if/for-if.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableComponent } from './about-container/table/table.component';
+import { MatTableModule } from '@angular/material/table'; // Import MatTableModule
 
 @NgModule({
   declarations: [
@@ -13,8 +16,9 @@ import { ForIfComponent } from './for-if/for-if.component';
     HomeContainerComponent,
     AboutContainerComponent,
     ForIfComponent,
+    TableComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,MatTableModule],
   providers: [],
   bootstrap: [AppComponent],
 })
