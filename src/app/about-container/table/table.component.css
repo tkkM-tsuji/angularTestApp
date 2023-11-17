@@ -1,0 +1,29 @@
+/* table.component.css */
+table {
+    margin-right: 20px !important; /* top right bottom left */
+    border: 2px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: blue ;
+    background-color: aqua!important;
+    padding: 25px;
+}
+
+/* Add margin and border to the right and bottom */
+th, td {
+    margin: 0;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove right border from the last column */
+th:last-child, td:last-child {
+    border-right: none;
+}
