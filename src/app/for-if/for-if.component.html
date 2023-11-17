@@ -1,0 +1,18 @@
+<!-- src/app/for-if/for-if.component.html -->
+
+<div>
+    <h2>For If Component</h2>
+  
+    <button (click)="toggleList()">クリック</button>
+  
+    <ng-container *ngIf="showList; else noList">
+      <ul>
+        <li *ngFor="let item of items">{{ item }}</li>
+      </ul>
+    </ng-container>
+  
+    <ng-template #noList>
+      <p>No items to display in For If Component.</p>
+    </ng-template>
+  </div>
+  
