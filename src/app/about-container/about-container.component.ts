@@ -13,8 +13,8 @@ export class AboutContainerComponent implements OnInit {
   ngOnInit() {
     const users: UserData[] = [
       { id: '1', name: 'Tanaka', progress: '75%', color: 'red' },
-      { id: '2', name: 'Doe', progress: '50%', color: 'blue' },
-      { id: '3', name: 'Jane', progress: '90%', color: 'green' },
+      { id: '2', name: 'Doe', progress: '50%', color: 'blue' ,  newProperty: 'value2' },
+      { id: '3', name: 'Jane', progress: '90%', color: 'green' ,  newProperty: 'value3' },
     ];
 
     this.dataSource.data = users;

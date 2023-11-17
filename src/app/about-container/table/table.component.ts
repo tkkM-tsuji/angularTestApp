@@ -6,7 +6,7 @@ export interface UserData {
   name: string;
   progress: string;
   color: string;
-  
+  newProperty?: string;
 }
 
 @Component({
@@ -16,5 +16,5 @@ export interface UserData {
 })
 export class TableComponent {
   @Input() dataSource: MatTableDataSource<UserData> = new MatTableDataSource<UserData>();
-  displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
+  displayedColumns: string[] = ['id', 'name', 'progress', 'color',"newProperty"];
 }

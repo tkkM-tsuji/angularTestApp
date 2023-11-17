@@ -1,30 +1,13 @@
 <!-- table.component.html -->
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
-
-  <!-- ID Column -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>ID</th>
-    <td mat-cell *matCellDef="let user">{{user.id}}</td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let user">{{user.name}}</td>
-  </ng-container>
-
-  <!-- Progress Column -->
-  <ng-container matColumnDef="progress">
-    <th mat-header-cell *matHeaderCellDef>Progress</th>
-    <td mat-cell *matCellDef="let user">{{user.progress}}</td>
-  </ng-container>
-
-  <!-- Color Column -->
-  <ng-container matColumnDef="color">
-    <th mat-header-cell *matHeaderCellDef>Color</th>
-    <td mat-cell *matCellDef="let user" [style.color]="user.color">{{user.color}}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Iterate over all columns dynamically -->
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef>{{ column | titlecase }}</th>
+      <td mat-cell *matCellDef="let user">{{ user[column] }}</td>
+    </ng-container>
+  
+    <!-- Header and row definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
