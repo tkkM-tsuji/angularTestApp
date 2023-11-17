@@ -1,1 +1,7 @@
-<p>home-container works!</p>
+<div>
+    <p>home-container works!</p>
+    <input [(ngModel)]="inputValue" placeholder="Enter value" />
+    <button (click)="onButtonClick()">Save to NGXS</button>
+    <p>Stored Value: {{ getInputValue() }}</p>
+  </div>
+  
